@@ -15,24 +15,15 @@ const Photos = () => {
 
   const divLoader = useRef();
 
-  console.log(photo);
-
-
-
   useEffect(() => {
-	  
-	  
-	const handleScroll = () => {
+    const handleScroll = () => {
+      const loader = divLoader.current;
+      const { y } = loader.getBoundingClientRect();
+      if (y - window.innerHeight <= 0) {
+        dispatch(getPhotos());
+      }
+    };
 
-		const loader = divLoader.current;
-		const { y } = loader.getBoundingClientRect();
-		if (y - window.innerHeight <= 0) {
-		  dispatch(getPhotos());
-		}
-	  };  
-	  
-	  
-	  
     dispatch(getPhotos());
 
     window.addEventListener("scroll", handleScroll);
