@@ -1,4 +1,4 @@
-import axios from "axios";
+import {getAll} from "../services/photo"
 
 // constantes
 const dataInicial = {
@@ -44,10 +44,11 @@ export const getPhotos = () => async (dispatch, getState) => {
 
   if (!loading) {
     try {
-      const res = await axios.get(`${URL}?page=${page}&limit=10`);
+    //  const res = await axios.get(`${URL}?page=${page}&limit=10`);
+      const photos = await getAll(page);
       dispatch({
         type: GET_PHOTOS_SUCCESS,
-        payload: { photo: res.data, page: page + 1 },
+        payload: { photo: photos, page: page + 1 },
       });
     } catch (error) {
       console.log(error);

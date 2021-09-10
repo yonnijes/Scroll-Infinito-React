@@ -1,7 +1,5 @@
 import { createStore, combineReducers, compose, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
-
-
 import photoDucks from "./photoDuck";
 
 const rootReducer = combineReducers({
