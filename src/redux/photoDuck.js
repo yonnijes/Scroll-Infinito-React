@@ -1,4 +1,4 @@
-import {getAll} from "../services/photo"
+import {getAll} from "../services/photo";
 
 // constantes
 const dataInicial = {
@@ -8,7 +8,6 @@ const dataInicial = {
 };
 
 // types
-let URL = "https://picsum.photos/v2/list";
 
 let GET_PHOTOS = "GET_PHOTOS";
 let GET_PHOTOS_SUCCESS = "GET_PHOTOS_SUCCESS";

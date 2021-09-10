@@ -3,7 +3,6 @@ import thunk from "redux-thunk";
 import photoDucks from "./photoDuck";
 
 const rootReducer = combineReducers({
-
   photo: photoDucks,
 });
 

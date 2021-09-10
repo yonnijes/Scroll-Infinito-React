@@ -63,7 +63,7 @@ const Photos = () => {
             style={{
               width: "500px",
               height: "auto",
-              marginBottom: "10px",
+              margin: "10px",
               borderRadius: "3px",
             }}
             alt=""
